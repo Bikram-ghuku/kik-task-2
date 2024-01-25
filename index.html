@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <title>Resturant</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <div class="img"><img src="./img/favicon.png" alt="Navbar_logo"></div>
+            <div class="logo-text">Resturant</div>
+        </div>
+        <div class="ham" >
+            <label for="ham-check">
+                <i class="ham-img">☰</i>
+                <i class="ham-close">✖</i>
+            </label>
+            <input type="checkbox" class="ham-check" id="ham-check" hidden/>
+            
+        </div>
+        <div class="nav-items">
+            <div class="nav-item"><a href="#main">Home</a></div>
+            <div class="nav-item"><a href="#bestfood">Menu</a></div>
+            <div class="nav-item"><a href="#recc">About us</a></div>
+            <div class="nav-item"><a href="./cart.html">Shoping Cart</a></div>
+            <div class="nav-item"><a href="#footer">Contact us</a></div>
+        </div>
+    </div>
+    <div class="contents-cover">
+        <div class="nav-buffer"></div>
+        <div class="contents">
+            <!--Main section start-->
+            <div class="main" id="main">
+                <div class="main-left">
+                    <div class="main-left-text">
+                        <div class="main-left-text1">Welcome to</div>
+                        <div class="main-left-text2">Resturant</div>
+                        <div class="main-left-text3">Find your favorite meals here</div>
+                        <div class="main-left-button1"><a href="#bestfood" class="main-left-button1-link">Menu</a></div>
+                    </div>
+                </div>
+                <div class="main-right">
+                    <img src="./img/reseturant.png" alt="foodstore" class="main-right-img">
+                </div>
+            </div>
+            <!--Main section end-->
+            <!--Best Selling section start-->
+            <div class="bestfood" id="bestfood">
+                <div class="bestfood-title">Food Menu</div>
+                <div class="bestfood-section">
+                    <div class="bestfood-food" id="breakfast">
+                        <div class="bestfood-food-text1">Breakfast</div>
+                    </div>
+                    <div class="bestfood-food" id="lunch">
+                        <div class="bestfood-food-text1">Lunch</div>
+                        
+                    </div>
+                    <div class="bestfood-food" id="desserts">
+                        <div class="bestfood-food-text1">Desserts</div>
+                        
+                    </div>
+                    <div class="bestfood-food" id="Bevereges">
+                        <div class="bestfood-food-text1">Bevereges</div>
+                       
+                    </div>
+                </div>
+            </div>
+            <script src="./js/main.js"></script>
+            <script>
+                function addProduct(item){
+                    var data = []
+                    var product = localStorage.getItem("product")
+                    if(product){
+                        data = JSON.parse(product)
+                    }
+                    data.push(JSON.stringify(item))
+                    localStorage.setItem("product", JSON.stringify(data))
+                }
+            </script>
+            <!--Best Selling section end-->
+            <!--Footer section start-->
+            <div class="footer" id="footer">
+                <div class="footer-po">
+                    <h1 class="footer-po-text1">Resturant</h1>
+                    <div class="footer-po-wrap">
+                        <div class="footer-po-text2">
+                            Savor the moment, indulge in flavor – where every bite tells a story.
+                        </div>
+                        <br><br>
+                        <div class="footer-po-text3">© 2023 Bikram Ghuku. All rights reserved.</div>
+                    </div>
+                </div>
+                <div class="footer-p2">
+                    <h1 class="footer-p2-title">About Us</h1>
+                    <div class="footer-p2-wrap">
+                        <div class="footer-p2-text"><a href="">Terms and Conditions</a></div>
+                        <div class="footer-p2-text"><a href="">Privacy Policy</a></div>
+                        <div class="footer-p2-text footer-p2-text-btm"><a href="">Copyright information</a></div>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <h1>Follow Us</h1>
+                    <div class="footer-social-wrap">
+                        <div class="footer-socials-item">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <img src="./img/social/facebook.png" alt="facebook" class="footer-socials-item-img">
+                                Facebook
+                            </a>
+                        </div>
+                        <div class="footer-socials-item">
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <img src="./img/social/instagram.png" alt="instagram" class="footer-socials-item-img">
+                                Instagram
+                            </a>
+                        </div>
+                        <div class="footer-socials-item">
+                            <a href="https://www.twitter.com/" target="_blank">
+                                <img src="./img/social/twitter.png" alt="twitter" class="footer-socials-item-img">
+                                Twitter
+                            </a>
+                        </div>
+                        <div class="footer-socials-item">
+                            <a href="https://www.linkedin.com/" target="_blank">
+                                <img src="./img/social/linkedin.png" alt="linkedin" class="footer-socials-item-img">
+                                Linkedin
+                            </a>
+                        </div>
+                        <div class="footer-socials-item">
+                            <a href="#main">
+                                <button class="footer-socials-item-button">Back to top</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Footer section end-->
+        </div>
+    </div>
+</body>
+</html>
